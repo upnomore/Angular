@@ -1,15 +1,12 @@
 <h3>LISTADO SUPERHEROES</h3>
 <hr>
-<ul>
-    <div class="container">
-        <div class="card" style="width: 18rem" *ngFor="let superheroe of superheroes">
-            <img src="{{superheroe.img}}" class="card-img-top">
-            <div class="card-body">
-                <h3 class="card-title">{{superheroe.nombre}}</h3><br>
-                <p class>Biografia: {{superheroe.bio}}</p><br>
-                <p class>Aparicion: {{superheroe.aparicion}}</p><br>
-                <p class>Casa: {{superheroe.casa}}</p>
-            </div>
-        </div>
-    </div><br>
+<ul *ngFor="let superheroe of superheroes" style="display: flex; list-style:none" >
+    <img src="{{superheroe.img}}" class="card-img-top" style="width: 150px; height:210px;">
+    <li>{{superheroe.nombre}}</li>
+    <li>
+        <button class="btn btn-primary" type="button" data-bs-toggle="modal" 
+        data-bs-target="#modalprueba" (click)="datos(superheroe)" style="margin:5px">Mostrar</button>  
+    </li>
 </ul>
+<app-casas [heroes]="superheroes"></app-casas>
+<app-modal></app-modal>

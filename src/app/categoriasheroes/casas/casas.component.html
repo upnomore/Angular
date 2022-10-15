@@ -1,0 +1,36 @@
+<h2>Sección Casas SuperHeroes</h2>
+<hr>
+<div class="dropdown">
+    <a class="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+        aria-expanded="false">Tipo de Casa del Heroe</a>
+
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <li><a class="dropdown-item" (click)="lista('DC')">DC</a></li>
+        <li><a class="dropdown-item" (click)="lista('Marvel')">Marvel</a></li>
+    </ul>
+</div>
+<table class="table container">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Aparición</th>
+            <th scope="col">Casa</th>
+        </tr>
+    </thead>
+    <tbody>
+        <div *ngFor="let heroe of buscarheroe;">
+            <tr>
+                <div *ngIf="heroe.casa=='DC'else color2">
+                    <td style="background-color: red;">{{heroe.nombre}}</td>
+                    <td style="background-color: red;">{{heroe.aparicion}}</td>
+                    <td style="background-color: red;">{{heroe.casa}}</td>
+                </div>
+                <ng-template #color2>
+                    <td style="background-color: skyblue;">{{heroe.nombre}}</td>
+                    <td style="background-color: skyblue;">{{heroe.aparicion}}</td>
+                    <td style="background-color: skyblue;">{{heroe.casa}}</td>
+                </ng-template>
+            </tr>
+        </div>
+    </tbody>
+</table>

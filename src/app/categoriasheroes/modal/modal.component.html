@@ -1,0 +1,24 @@
+<div class="modal fade" id="modalprueba" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true" >
+
+    <div class="modal-dialog" *ngIf="mostrar">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            <div> 
+              <h5>{{mostrar.nombre}}</h5>
+            </div>
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h3><img src="{{mostrar.img}}" class="card-img-top" style="width: 200px; height:210px;">Imagen</h3>
+          <h2>Biografia: {{mostrar.bio}}</h2>
+          <h2>Fecha de Aparición: {{mostrar.aparicion}}</h2>
+          <h2>Casa perteneciente: {{mostrar.casa}}</h2>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>

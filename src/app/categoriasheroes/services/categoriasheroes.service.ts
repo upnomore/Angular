@@ -13,7 +13,7 @@ export class categoriasheroesService {
             aparicion: "1941-11-01",
             casa:"DC"
           },
-          {
+          { 
             nombre: "Batman",
             bio: "Los rasgos principales de Batman se resumen en «destreza física, habilidades deductivas y obsesión». La mayor parte de las características básicas de los cómics han variado por las diferentes interpretaciones que le han dado al personaje.",
             img: "./assets/batman.png",

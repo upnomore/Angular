@@ -12,7 +12,7 @@ import { CategoriasheroesModule } from './categoriasheroes/categoriasheroes.modu
   imports: [
     BrowserModule,
     DbzModule,
-    CategoriasheroesModule
+    CategoriasheroesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

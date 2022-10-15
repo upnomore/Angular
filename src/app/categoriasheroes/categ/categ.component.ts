@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { categoriasheroesService } from '../services/categoriasheroes.service';
+import { Component, Input, ViewChild } from '@angular/core';
 import { superheroe } from '../interfaces/interface';
+import { categoriasheroesService } from '../services/categoriasheroes.service';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-categ',
@@ -9,10 +10,17 @@ import { superheroe } from '../interfaces/interface';
 })
 export class CategComponent  {
 
-  get superheroes(){
-    return this.CategoriasHeroesService.superheroes
+
+  superheroes: superheroe[] = [];
+
+  @ViewChild(ModalComponent)mostrar!: ModalComponent
+  
+  constructor (public CategoriasHeroesService: categoriasheroesService) {
+    this.superheroes = this.CategoriasHeroesService.superheroes;
   }
 
-  constructor (public CategoriasHeroesService: categoriasheroesService) {}
+  datos(superheroe: superheroe){
+    this.mostrar.datos(superheroe)
+  }
 
 }

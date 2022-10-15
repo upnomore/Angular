@@ -1,20 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { CategComponent } from './categ/categ.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { categoriasheroesService } from './services/categoriasheroes.service';
-import { ListarcardsComponent } from './listarcards/listarcards.component';
-
-
+import { ModalComponent } from './modal/modal.component';
+import { CasasComponent } from './casas/casas.component';
 
 @NgModule({
   declarations: [
     CategComponent,
     MainpageComponent,
-    ListarcardsComponent
+    ModalComponent,
+    CasasComponent
   ],
-  exports: [
-    MainpageComponent
+  exports: [  
+    MainpageComponent,
+    CategComponent,
+    CasasComponent
   ],
   imports: [
     CommonModule
