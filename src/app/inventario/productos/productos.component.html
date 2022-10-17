@@ -1,24 +1,27 @@
-
 <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-      Inventarios
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-      <li><a class="dropdown-item">Inventario 1</a></li>
-    </ul>
-  </div>
+    <a class="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+        aria-expanded="false">inventarios</a>
 
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <li><a class="dropdown-item">inventario1</a></li>
+        <li><a class="dropdown-item">inventario2</a></li>
+    </ul>
+</div>
 <table class="table container">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">Nombre Producto:</th>
-      <th scope="col">Cantidad: </th>
-    </tr>
-  </thead>
-  <tbody>
-    <div *ngFor="let elemento of producto">
-      <td>{{elemento.objeto}}</td>
-      <td>{{elemento.cantidad}}</td>
-    </div>
-  </tbody>
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Cantidad</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr *ngFor="let inv of inventario1;">
+                <td>{{inv.objeto}}</td>
+                <td> 
+                    <button (click)="acumular(-base)"> -{{base}}</button>
+                    <span>  {{inv.cantidad}}  </span>
+                    <button (click)="acumular(base  )"> +{{base}}</button>
+                </td>
+            </tr>
+    </tbody>
 </table>

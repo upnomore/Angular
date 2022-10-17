@@ -9,7 +9,7 @@ import { InventarioService } from './services/inventario.service';
 @NgModule({
   declarations: [
     Mainpage2Component,
-    ProductosComponent
+    ProductosComponent,
   ],
   imports: [
     CommonModule

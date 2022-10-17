@@ -7,23 +7,23 @@ export class InventarioService{
     public objinv: elementos[] = [
         {
             objeto: "Papas-Margarita",
-            cantidad: 1,
-            img:"./assets/papasmargarita.png"
+            cantidad: 0,
+            img:"./assets/papasmargarita.png",
         },
         {
             objeto: "Gaseosa-Pepsi",
-            cantidad: 1,
-            img: "./assets/pepsi.png"
+            cantidad: 0,
+            img: "./assets/pepsi.png",
         },
         {
             objeto: "Gomitas-Trululu",
-            cantidad: 1,
-            img: "./assets/trululu.png"
+            cantidad: 0,
+            img: "./assets/trululu.png",
         },
         {
             objeto: "Galletas-Oreo",
-            cantidad: 1,
-            img: "./assets/oreo.png"
+            cantidad: 0,
+            img: "./assets/oreo.png",
         }
     ];
 

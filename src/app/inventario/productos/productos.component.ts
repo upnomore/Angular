@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, destroyPlatform, Input } from '@angular/core';
 import { elementos } from '../interfaces/inventario.interface';
 import { InventarioService } from '../services/inventario.service';
 
@@ -8,19 +8,23 @@ import { InventarioService } from '../services/inventario.service';
 })
 export class ProductosComponent {
 
-  constructor() { 
+  inventario1: elementos[] = []
+
+  inventario: elementos = {
+    objeto: "",
+    cantidad: 0,
+    img: ""
   }
 
-  producto: elementos[] = []
+  base: number = 1
 
-  @Input() productos: elementos[] = []
-
-  lista(){
-    this.producto = this.productos
+  acumular(valor:number){
+    this.inventario.cantidad += valor
   }
 
-
-
-
-
+  constructor(public InventarioService: InventarioService) {
+    this.inventario1 = this.InventarioService.elementosinv 
+   }
+    
 }
+
